@@ -1,84 +1,93 @@
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { CiMail, CiSearch } from 'react-icons/ci'
-import { GoBell, GoHomeFill } from 'react-icons/go'
-import { HiOutlineUser } from 'react-icons/hi'
-import { IoEllipsisHorizontal, IoEllipsisHorizontalCircle, IoFlashOutline, IoPeopleOutline } from 'react-icons/io5'
+import { CiMail, CiSearch } from 'react-icons/ci';
+import { FaRegBookmark } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { GoHomeFill } from 'react-icons/go';
+import { GrNotification } from "react-icons/gr";
+import { HiOutlineUser } from 'react-icons/hi';
+import { IoEllipsisHorizontal, IoEllipsisHorizontalCircle, IoFlashOutline, IoPeopleOutline } from 'react-icons/io5';
 
-import ImageProfile from './../assets/images/image_profile.png'
+import ImageProfile from './../assets/images/image_profile.png';
 
-const Menu = () => {
+function Menu() {
   return (
     <div className="mb-4">
-      <div className="pb-4">
-        <h2>LOGO</h2>
-      </div>
+      <Link href='/' className='w-max hover:bg-focus p-5 rounded-3xl flex'>
+        <Image src="/logo.png" alt="X logo" width={40} height={40} />
+      </Link>
 
-      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1 font-bold">
+      <a href="#" className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1 font-bold">
         <GoHomeFill className="size-8" />
-        <a href="" className="ml-4 text-xl">Página inicial</a>
-      </div>
+        <p className="ml-4 text-xl">Página inicial</p>
+      </a>
 
-      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+      <a href="#" className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
         <CiSearch className="size-8" />
-        <a href="" className="ml-4 text-xl">Explorar</a>
-      </div>
+        <p className="ml-4 text-xl">Explorar</p>
+      </a>
 
-      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
-        <GoBell className="size-8" />
-        <a href="" className="ml-4 text-xl">Notificações</a>
-      </div>
+      <a href="#" className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+        <GrNotification className="size-8" />
+        <p className="ml-4 text-xl">Notificações</p>
+      </a>
 
-      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+      <a href="#" className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
         <CiMail className="size-8" />
-        <a href="" className="ml-4 text-xl">Mensagens</a>
-      </div>
+        <p className="ml-4 text-xl">Mensagens</p>
+      </a>
 
-      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
-        <IoEllipsisHorizontalCircle className="size-8" />
-        <a href="" className="ml-4 text-xl">Grok</a>
-      </div>
+      <a href="#" className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+        <FaXTwitter className="size-8" />
+        <p className="ml-4 text-xl">Grok</p>
+      </a>
 
-      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+      <a href="#" className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+        <FaRegBookmark className="size-8" />
+        <p className="ml-4 text-xl">Itens Salvos</p>
+      </a>
+
+      <a href="#" className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
         <IoPeopleOutline className="size-8" />
-        <a href="" className="ml-4 text-xl">Comunidades</a>
-      </div>
+        <p className="ml-4 text-xl">Comunidades</p>
+      </a>
 
-      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
-        <IoEllipsisHorizontalCircle className="size-8" />
-        <a href="" className="ml-4 text-xl">Premium</a>
-      </div>
+      <a href="#" className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+        <FaXTwitter className="size-8" />
+        <p className="ml-4 text-xl">Premium</p>
+      </a>
 
-      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+      <a href="#" className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
         <IoFlashOutline className="size-8" />
-        <a href="" className="ml-4 text-xl">Empresas</a>
-      </div>
+        <p className="ml-4 text-xl">Empresas</p>
+      </a>
 
-      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+      <a href="#" className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
         <HiOutlineUser className="size-8" />
-        <a href="" className="ml-4 text-xl">Perfil</a>
-      </div>
+        <p className="ml-4 text-xl">Perfil</p>
+      </a>
 
-      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+      <a href="#" className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-2">
         <IoEllipsisHorizontalCircle className="size-8" />
-        <a href="" className="ml-4 text-xl">Mais</a>
-      </div>
+        <p className="ml-4 text-xl">Mais</p>
+      </a>
 
-      <button className="text-black bg-white py-3 w-full rounded-3xl font-semibold mb-1">
+      <button className="text-black bg-white py-3 w-full rounded-3xl font-semibold mb-1" type='button'>
         Postar
       </button>
 
-      <div className="flex justify-between mt-2">
-        <div>
-          <Image src={ImageProfile} width="30" height="30" alt="" className="rounded-full" />
+      <div className="flex justify-between mt-2 items-center">
+        <div  className="gap-4 flex justify-between mt-2">
+          <Image src={ImageProfile} width="35" height="35" alt="" className="rounded-full" />
+
+          <div>
+            <p className="font-semibold text-xs">Ariel Chama</p>
+            <p className="text-xs">@chama_ariel</p>
+          </div>
         </div>
 
-        <div>
-          <p className="font-semibold text-xs">Ariel Chama</p>
-          <p className="text-xs">@chama_ariel</p>
-        </div>
-
-        <div>
+        <div className='hover:bg-focus p-3 rounded-3xl flex items-center cursor-pointer'>
           <IoEllipsisHorizontal />
         </div>
       </div>
