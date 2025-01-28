@@ -14,7 +14,7 @@ import ImageProfile from './../assets/images/image_profile.png';
 function Menu() {
   return (
     <div className="mb-4">
-      <Link href='/' className='w-max hover:bg-focus p-5 rounded-3xl flex'>
+      <Link href='/' className='w-max hover:bg-focus p-3 rounded-full flex'>
         <Image src="/logo.png" alt="X logo" width={40} height={40} />
       </Link>
 
