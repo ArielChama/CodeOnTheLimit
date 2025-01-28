@@ -1,16 +1,17 @@
-import React from 'react'
 import Image from 'next/image'
-import imageProfile from '@/app/images/image_profile.png'
+
 import { BiHeart, BiRepost } from 'react-icons/bi'
 import { FiMessageCircle, FiUpload } from 'react-icons/fi'
 import { MdBookmarkBorder } from 'react-icons/md'
 import { VscGraph } from 'react-icons/vsc'
 
+import ImageProfile from './../assets/images/image_profile.png'
+
 const Post = () => {
   return (
     <div className="flex">
       <div>
-        <Image src={imageProfile} width="80" height="80" alt="" className="rounded-full" />
+        <Image src={ImageProfile} width="80" height="80" alt="" className="rounded-full" />
       </div>
 
       <div className="ml-2">

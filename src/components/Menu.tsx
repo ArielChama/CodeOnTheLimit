@@ -1,10 +1,11 @@
-import React from 'react'
-import imageProfile from '@/app/images/image_profile.png'
 import Image from 'next/image'
-import { GoBell, GoHomeFill } from 'react-icons/go'
+
 import { CiMail, CiSearch } from 'react-icons/ci'
-import { IoEllipsisHorizontal, IoEllipsisHorizontalCircle, IoFlagOutline, IoFlashOutline, IoPeople, IoPeopleOutline } from 'react-icons/io5'
+import { GoBell, GoHomeFill } from 'react-icons/go'
 import { HiOutlineUser } from 'react-icons/hi'
+import { IoEllipsisHorizontal, IoEllipsisHorizontalCircle, IoFlashOutline, IoPeopleOutline } from 'react-icons/io5'
+
+import ImageProfile from './../assets/images/image_profile.png'
 
 const Menu = () => {
   return (
@@ -14,10 +15,10 @@ const Menu = () => {
       </div>
 
       <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1 font-bold">
-        <GoHomeFill className="size-8" />                                                                                                                                                                                                                                                                                                                                                                                                                     
+        <GoHomeFill className="size-8" />
         <a href="" className="ml-4 text-xl">Página inicial</a>
       </div>
-      
+
       <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
         <CiSearch className="size-8" />
         <a href="" className="ml-4 text-xl">Explorar</a>
@@ -67,10 +68,9 @@ const Menu = () => {
         Postar
       </button>
 
-
       <div className="flex justify-between mt-2">
         <div>
-          <Image src={imageProfile} width="30" height="30" alt="" className="rounded-full" />
+          <Image src={ImageProfile} width="30" height="30" alt="" className="rounded-full" />
         </div>
 
         <div>

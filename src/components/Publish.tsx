@@ -1,14 +1,16 @@
 "use client"
 
-import React from 'react'
 import Image from 'next/image'
-import imageProfile from '@/app/images/image_profile.png'
+import React from 'react'
+
+import { BiWorld } from 'react-icons/bi'
+import { BsEmojiSmile } from 'react-icons/bs'
 import { GrImage } from 'react-icons/gr'
 import { MdOutlineGifBox } from 'react-icons/md'
-import { BsEmojiSmile } from 'react-icons/bs'
-import { BiWorld } from 'react-icons/bi'
 
-const Publish = () => {
+import ImageProfile from './../assets/images/image_profile.png'
+
+function Publish () {
   const [phrase, setPhrase] = React.useState(0)
 
   const showPhrase = () => {
@@ -18,7 +20,7 @@ const Publish = () => {
   return (
     <div className="flex p-4 mr-2">
       <div className="">
-        <Image src={imageProfile} width="30" height="30" alt="" className="rounded-full" />
+        <Image src={ImageProfile} width="30" height="30" alt="" className="rounded-full" />
       </div>
 
       <div className="w-11/12">

@@ -1,12 +1,13 @@
 import Image from "next/image";
-import Publish from "./components/Publish";
-import Menu from "./components/Menu";
-import Post from "./components/Post";
-import imageProfile from '@/app/images/image_profile.png'
-import { CiSearch } from "react-icons/ci";
-import { IoEllipsisHorizontal, IoEllipsisHorizontalCircle } from "react-icons/io5";
 
-export default function Home() {
+import { CiSearch } from "react-icons/ci";
+import { IoEllipsisHorizontal } from "react-icons/io5";
+
+import { Menu, Post, Publish } from "./../components";
+
+import ImageProfile from './../assets/images/image_profile.png';
+
+function Home() {
   return (
     <main className="mt-2">
       <div className="flex justify-between mx-auto w-10/12">
@@ -60,7 +61,7 @@ export default function Home() {
 
             <div className="flex gap-2 justify-between px-3 py-4 hover:bg-focus hover:cursor-pointer">
               <div>
-                <Image src={imageProfile} width="40" height="40" alt="" className="rounded-full" />
+                <Image src={ImageProfile} width="40" height="40" alt="" className="rounded-full" />
               </div>
 
               <div className="w-8/12">
@@ -79,7 +80,7 @@ export default function Home() {
 
             <div className="flex gap-2 justify-between px-3 py-4 hover:bg-focus hover:cursor-pointer">
               <div>
-                <Image src={imageProfile} width="40" height="40" alt="" className="rounded-full" />
+                <Image src={ImageProfile} width="40" height="40" alt="" className="rounded-full" />
               </div>
 
               <div className="w-8/12">
@@ -141,3 +142,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Home;
