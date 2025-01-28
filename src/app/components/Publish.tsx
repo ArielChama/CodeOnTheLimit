@@ -1,27 +1,39 @@
+"use client"
+
 import React from 'react'
 import Image from 'next/image'
 import imageProfile from '@/app/images/image_profile.png'
-import ImageIcon from './icons/ImageIcon'
-import Gif from './icons/Gif'
-import World from './icons/World'
+import { GrImage } from 'react-icons/gr'
+import { MdOutlineGifBox } from 'react-icons/md'
+import { BsEmojiSmile } from 'react-icons/bs'
+import { BiWorld } from 'react-icons/bi'
 
 const Publish = () => {
+  const [phrase, setPhrase] = React.useState(0)
+
+  const showPhrase = () => {
+    setPhrase(phrase + 1)
+  }
+
   return (
-    <div className="flex p-4">
+    <div className="flex p-4 mr-2">
       <div className="">
         <Image src={imageProfile} width="30" height="30" alt="" className="rounded-full" />
       </div>
 
       <div className="w-11/12">
-        <textarea name="" id="" className="p-2 bg-transparent w-full" placeholder="O que está acontecendo?"></textarea>
-        <p className="text-primary font-semibold">
-          <a href="" className="flex gap-1"><World /> Qualquer pessoa pode responder</a>
-        </p>
+        <textarea name="" id="" className="p-2 bg-transparent w-full text-xl" placeholder="O que está acontecendo?" onFocus={showPhrase}></textarea>
+        {
+        phrase >= 1? <div className="text-primary text-sm font-semibold hover:bg-primaryHover px-4 py-1 rounded-2xl" >
+          <a href="" className="flex gap-1 items-center"><BiWorld /> Qualquer pessoa pode responder</a>
+        </div> : ""
+        }
 
-        <div className="flex border-t border-line p-2 mt-3 justify-between">
-          <div className="flex gap-2 text-primary">
-            <ImageIcon />
-            <Gif />
+        <div className="flex items-center border-t border-line p-2 mt-3 justify-between">
+          <div className="flex gap-4 text-primary">
+            <GrImage className="size-5" />
+            <MdOutlineGifBox className="size-5" />
+            <BsEmojiSmile className="size-5" />
           </div>
 
           <button className="text-black bg-slate-300 px-4 py-1 rounded-3xl font-semibold">Postar</button>

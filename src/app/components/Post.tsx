@@ -1,12 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import imageProfile from '@/app/images/image_profile.png'
-import Comment from './icons/Comment'
-import Repost from './icons/Repost'
-import Save from './icons/Save'
-import Share from './icons/Share'
-import Heart from './icons/Heart'
-import View from './icons/View'
+import { BiHeart, BiRepost } from 'react-icons/bi'
+import { FiMessageCircle, FiUpload } from 'react-icons/fi'
+import { MdBookmarkBorder } from 'react-icons/md'
+import { VscGraph } from 'react-icons/vsc'
 
 const Post = () => {
   return (
@@ -32,29 +30,29 @@ const Post = () => {
         </div>
 
         <div className="flex justify-between items-center mt-2">
-          <div className="flex text-sm gap-2">
-            <Comment />
+          <div className="flex items-center text-base gap-2">
+            <FiMessageCircle />
             10
           </div>
 
-          <div className="flex text-sm gap-2">
-            <Repost />
+          <div className="flex items-center text-base gap-2">
+            <BiRepost />
             11
           </div>
 
-          <div className="flex text-sm gap-2">
-            <Heart />
+          <div className="flex items-center text-base gap-2">
+            <BiHeart />
             0
           </div>
 
-          <div className="flex text-sm gap-2">
-            <View />
+          <div className="flex items-center text-base gap-2">
+            <VscGraph />
             12
           </div>
 
-          <div className="flex gap-2 text-sm">
-            <Save />
-            <Share />
+          <div className="flex items-center gap-2 text-base">
+            <MdBookmarkBorder />
+            <FiUpload />
           </div>
         </div>
       </div>

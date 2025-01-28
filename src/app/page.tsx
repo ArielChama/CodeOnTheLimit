@@ -3,25 +3,26 @@ import Publish from "./components/Publish";
 import Menu from "./components/Menu";
 import Post from "./components/Post";
 import imageProfile from '@/app/images/image_profile.png'
-import ElipsMenu from "./components/icons/ElipsMenu";
+import { CiSearch } from "react-icons/ci";
+import { IoEllipsisHorizontal, IoEllipsisHorizontalCircle } from "react-icons/io5";
 
 export default function Home() {
   return (
     <main className="mt-2">
-      <div className="flex justify-between w-2/3 mx-auto">
-        <div className="">
+      <div className="flex justify-between mx-auto w-10/12">
+        <div className="px-4">
           <Menu />
         </div>
 
-        <div className="w-3/6 border-l border-r border-line">
+        <div className="w-5/12 border-l border-r border-line">
           <div className="w-full">
-            <div className="border-line border-b pt-4 px-4 flex justify-around">
-              <div className="border-b-2 border-primary">
-                <h4>Para você</h4>
+            <div className="border-line border-b flex justify-around">
+              <div className="hover:bg-line hover:cursor-pointer w-6/12 pt-2 text-center px-2">
+                <h4 className="font-semibold border-b-4 pb-2 w-1/3 border-primary">Para você</h4>
               </div>
-              
-              <div>
-                <h4>Seguindo</h4>
+
+              <div className="text-center hover:bg-line hover:cursor-pointer w-6/12 pt-2">
+                <h4 className="">Seguindo</h4>
               </div>
             </div>
 
@@ -37,12 +38,15 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-1/3">
-          <div className="mb-3">
-            <input type="search" placeholder="Buscar" className="border-line border w-full rounded-3xl py-2 pl-3 bg-transparent" />
+        <div className="w-1/3 px-4">
+          <div className="mb-3 flex">
+            <div className="border-l border-t border-b rounded-l-3xl p-2 border-line">
+              <CiSearch className="size-5" />
+            </div>
+            <input type="search" placeholder="Buscar" className="border-line border-r border-t border-b w-full rounded-r-3xl py-2 pl-3 bg-transparent" />
           </div>
 
-          <div className="p-3 border rounded-lg border-line">
+          <div className="p-3 border rounded-2xl border-line">
             <h3 className="text-lg font-semibold">Assine o premium</h3>
             <p>Assine para desbloquear novos recursos e, se elegível, receba uma parte da receita.</p>
 
@@ -51,7 +55,7 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="border-line border mt-4 rounded-lg">
+          <div className="border-line border mt-4 rounded-2xl">
             <h3 className="text-lg font-semibold mt-3 ml-3">Quem seguir</h3>
 
             <div className="flex gap-2 justify-between px-3 py-4 hover:bg-focus hover:cursor-pointer">
@@ -91,9 +95,13 @@ export default function Home() {
                 </button>
               </div>
             </div>
+
+            <div className="flex gap-2 justify-between px-3 py-4 hover:bg-focus hover:cursor-pointer rounded-b-2xl">
+              <a href="" className="text-primary text-sm font-medium">Mostrar mais</a>
+            </div>
           </div>
 
-          <div className="border-line border mt-4 rounded-lg">
+          <div className="border-line border mt-4 rounded-2xl mb-4">
             <h3 className="text-lg font-semibold mt-3 ml-3">O que está acontecendo</h3>
 
             <div className="flex justify-between mt-2 p-3 hover:bg-focus hover:cursor-pointer">
@@ -106,7 +114,7 @@ export default function Home() {
               </div>
 
               <div>
-                <ElipsMenu />
+                <IoEllipsisHorizontal />
               </div>
             </div>
 
@@ -120,14 +128,14 @@ export default function Home() {
               </div>
 
               <div>
-                <ElipsMenu />
+                <IoEllipsisHorizontal />
               </div>
             </div>
 
-            <div className="flex justify-between mt-2 p-3 hover:bg-focus hover:cursor-pointer">
-              <a href="" className="text-primary text-sm">Mostrar mais</a>
+            <div className="mt-2 p-3 hover:bg-focus hover:cursor-pointer rounded-b-2xl">
+              <a href="" className="text-primary text-sm font-medium">Mostrar mais</a>
             </div>
-          </div>  
+          </div>
         </div>
       </div>
     </main>

@@ -1,82 +1,69 @@
 import React from 'react'
 import imageProfile from '@/app/images/image_profile.png'
 import Image from 'next/image'
-import Home from './icons/Home'
-import Search from './icons/Search'
-import Bel from './icons/Bel'
-import Message from './icons/Message'
-import Save from './icons/Save'
-import Work from './icons/Work'
-import Users from './icons/Users'
-import ElipseMenuCircle from './icons/ElipseMenuCircle'
-import XMark from './icons/XMark'
-import Flash from './icons/Flash'
-import User from './icons/User'
-import ElipsMenu from './icons/ElipsMenu'
+import { GoBell, GoHomeFill } from 'react-icons/go'
+import { CiMail, CiSearch } from 'react-icons/ci'
+import { IoEllipsisHorizontal, IoEllipsisHorizontalCircle, IoFlagOutline, IoFlashOutline, IoPeople, IoPeopleOutline } from 'react-icons/io5'
+import { HiOutlineUser } from 'react-icons/hi'
 
 const Menu = () => {
   return (
-    <div>
-      <div className="hover:bg-focus px-3 py-2 rounded-3xl flex mb-2">
-        <Home />
-        <a href="" className="ml-2">Página inicial</a>
+    <div className="mb-4">
+      <div className="pb-4">
+        <h2>LOGO</h2>
+      </div>
+
+      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1 font-bold">
+        <GoHomeFill className="size-8" />                                                                                                                                                                                                                                                                                                                                                                                                                     
+        <a href="" className="ml-4 text-xl">Página inicial</a>
       </div>
       
-      <div className="hover:bg-focus px-3 py-2 rounded-3xl flex mb-2">
-        <Search />
-        <a href="" className="ml-2">Explorar</a>
+      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+        <CiSearch className="size-8" />
+        <a href="" className="ml-4 text-xl">Explorar</a>
       </div>
 
-      <div className="hover:bg-focus px-3 py-2 rounded-3xl flex mb-2">
-        <Bel />
-        <a href="" className="ml-2">Notificações</a>
+      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+        <GoBell className="size-8" />
+        <a href="" className="ml-4 text-xl">Notificações</a>
       </div>
 
-      <div className="hover:bg-focus px-3 py-2 rounded-3xl flex mb-2">
-        <Message />
-        <a href="" className="ml-2">Mensagens</a>
+      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+        <CiMail className="size-8" />
+        <a href="" className="ml-4 text-xl">Mensagens</a>
       </div>
 
-      <div className="hover:bg-focus px-3 py-2 rounded-3xl flex mb-2">
-        <a href="" className="ml-2">Grok</a>
+      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+        <IoEllipsisHorizontalCircle className="size-8" />
+        <a href="" className="ml-4 text-xl">Grok</a>
       </div>
 
-      <div className="hover:bg-focus px-3 py-2 rounded-3xl flex mb-2">
-        <Save />
-        <a href="" className="ml-2">Itens salvos</a>
+      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+        <IoPeopleOutline className="size-8" />
+        <a href="" className="ml-4 text-xl">Comunidades</a>
       </div>
 
-      <div className="hover:bg-focus px-3 py-2 rounded-3xl flex mb-2">
-        <Work />
-        <a href="" className="ml-2">Empregos</a>
+      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+        <IoEllipsisHorizontalCircle className="size-8" />
+        <a href="" className="ml-4 text-xl">Premium</a>
       </div>
 
-      <div className="hover:bg-focus px-3 py-2 rounded-3xl flex mb-2">
-        <Users />
-        <a href="" className="ml-2">Comunidades</a>
+      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+        <IoFlashOutline className="size-8" />
+        <a href="" className="ml-4 text-xl">Empresas</a>
       </div>
 
-      <div className="hover:bg-focus px-3 py-2 rounded-3xl flex mb-2">
-        <XMark />
-        <a href="" className="ml-2">Premium</a>
+      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+        <HiOutlineUser className="size-8" />
+        <a href="" className="ml-4 text-xl">Perfil</a>
       </div>
 
-      <div className="hover:bg-focus px-3 py-2 rounded-3xl flex mb-2">
-        <Flash />
-        <a href="" className="ml-2">Empresas</a>
+      <div className="hover:bg-focus px-4 py-2 rounded-3xl flex items-center mb-1">
+        <IoEllipsisHorizontalCircle className="size-8" />
+        <a href="" className="ml-4 text-xl">Mais</a>
       </div>
 
-      <div className="hover:bg-focus px-3 py-2 rounded-3xl flex mb-2">
-        <User />
-        <a href="" className="ml-2">Perfil</a>
-      </div>
-
-      <div className="hover:bg-focus px-3 py-2 rounded-3xl flex mb-2">
-        <ElipseMenuCircle />
-        <a href="" className="ml-2">Mais</a>
-      </div>
-
-      <button className="text-black bg-white py-2 w-full rounded-3xl font-semibold mb-2">
+      <button className="text-black bg-white py-3 w-full rounded-3xl font-semibold mb-1">
         Postar
       </button>
 
@@ -92,7 +79,7 @@ const Menu = () => {
         </div>
 
         <div>
-          <ElipsMenu />
+          <IoEllipsisHorizontal />
         </div>
       </div>
     </div>
