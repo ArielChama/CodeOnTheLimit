@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#1A8CD8",
+        focus: "#181818",
+        line: "#2F3336",
       },
     },
   },
