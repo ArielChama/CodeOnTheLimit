@@ -10,11 +10,39 @@ import { MdOutlineGifBox } from 'react-icons/md'
 
 import ImageProfile from './../assets/images/image_profile.png'
 
-function Publish () {
+interface PublishProps {
+  onPublish: (post: {id: number, author: string, username: string, description: string, image: string, likes: number, 
+    reposts: number, 
+    comments: number,
+    views: number, date: string}) => void
+}
+
+const Publish: React.FC<PublishProps> = ({ onPublish }) => {
   const [phrase, setPhrase] = React.useState(0)
+
+  const [description, setDescription] = React.useState('')
 
   const showPhrase = () => {
     setPhrase(phrase + 1)
+  }
+
+  const handlePublish = () => {
+    const newPost = {
+      id: 3,
+      author: 'Ariel Chama',
+      username: 'arielchama',
+      description: description,
+      image: '',
+      likes: 0,
+      reposts: 0,
+      comments: 0,
+      views: 0,
+      date: "29 jan"
+    }
+
+    onPublish(newPost)
+
+    setDescription('')
   }
 
   return (
@@ -24,7 +52,7 @@ function Publish () {
       </div>
 
       <div className="w-11/12">
-        <textarea name="" id="" className="p-2 bg-transparent w-full text-xl" placeholder="O que está acontecendo?" onFocus={showPhrase}></textarea>
+        <textarea name="" value={description} onChange={(e) => setDescription(e.target.value)} className="p-2 bg-transparent w-full text-xl" placeholder="O que está acontecendo?" onFocus={showPhrase}></textarea>
         {
         phrase >= 1? <div className="text-primary text-sm font-semibold hover:bg-primaryHover px-4 py-1 rounded-2xl" >
           <a href="" className="flex gap-1 items-center"><BiWorld /> Qualquer pessoa pode responder</a>
@@ -38,7 +66,7 @@ function Publish () {
             <BsEmojiSmile className="size-5" />
           </div>
 
-          <button className="text-black bg-slate-300 px-4 py-1 rounded-3xl font-semibold">Postar</button>
+          <button className="text-black bg-slate-300 px-4 py-1 rounded-3xl font-semibold" onClick={handlePublish}>Postar</button>
         </div>
       </div>
     </div>

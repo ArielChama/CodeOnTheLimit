@@ -1,3 +1,6 @@
+'use client'
+
+import React from "react";
 import Image from "next/image";
 
 import { CiSearch } from "react-icons/ci";
@@ -7,7 +10,41 @@ import { Menu, Post, Publish } from "./../components";
 
 import ImageProfile from './../assets/images/image_profile.png';
 
+const posts = [{
+  id: 1,
+  author: 'Ariel Chama',
+  username: 'arielchama', 
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor turpis vel ipsum bibendum, ac finibus enim ultricies. Maecenas vel velit et turpis dictum placerat.',
+  image: '/post_image_1.jpg',
+  likes: 20,
+  reposts: 5,
+  comments: 10,
+  views: 3,
+  date: "27 de jan"
+},
+]
+
+interface PostType {
+  id: number
+  author: string
+  username: string
+  description: string
+  image: string
+  likes: number
+  reposts: number
+  comments: number
+  views: number
+  date: string
+}
+
+
 function Home() {
+  const [post, setPost] = React.useState<PostType[]>(posts)
+  
+  const onPublish = (newPost: PostType) => {
+    setPost([...post, newPost])
+  }
+
   return (
     <main className="mt-2">
       <div className="flex justify-between mx-auto w-10/12">
@@ -27,15 +64,17 @@ function Home() {
               </div>
             </div>
 
-            <Publish />
+            <Publish onPublish={onPublish} />
           </div>
 
-          <div className="p-2 text-center text-primary border-line border-t border-b">
+          <div className="p-2 text-center text-primary border-line hover:bg-line hover:cursor-pointer border-t border-b">
             <a href="" className="">Mostrar 342 posts</a>
           </div>
 
-          <div className="p-4">
-            <Post />
+          <div className="">
+            {post.map((p) => (
+              <Post post={p} />
+            ))}
           </div>
         </div>
 
