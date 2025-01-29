@@ -51,7 +51,7 @@ const Publish: React.FC<PublishProps> = ({ onPublish }) => {
   return (
     <div className="flex p-4 mr-2">
       <div className="">
-        <Image src={ImageProfile} width="30" height="30" alt="" className="rounded-full" />
+        <Image src={ImageProfile} width="40" height="40" alt="" className="rounded-full" />
       </div>
 
       <div className="w-11/12">

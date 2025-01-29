@@ -42,7 +42,7 @@ function Home() {
           <div className="w-full">
             <div className="border-line border-b flex justify-around">
               <div className="hover:bg-line hover:cursor-pointer w-6/12 pt-2 text-center px-2">
-                <h4 className="font-semibold border-b-4 pb-2 w-1/3 border-primary">Para você</h4>
+                <h4 className="font-semibold border-b-4 pb-2 w-1/3 border-primary ml-16">Para você</h4>
               </div>
 
               <div className="text-center hover:bg-line hover:cursor-pointer w-6/12 pt-2">
@@ -58,9 +58,10 @@ function Home() {
           </div>
 
           <div className="">
-            {post.map((p) => (
+            {post.slice().reverse().map((p) => (
               <Post key={p.id} post={p} />
-            ))}
+            ))
+            }
           </div>
         </div>
 

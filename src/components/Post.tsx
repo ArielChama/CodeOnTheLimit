@@ -37,7 +37,7 @@ const Post: React.FC<PostComponentProps> = ({ post }) => {
   return (
     <div className="flex border-b border-line py-8 px-4 hover:bg-line hover:cursor-pointer">
       <div>
-        <Image src={ImageProfile} width="50" height="50" alt="" className="rounded-full" />
+        <Image src={ImageProfile} width="40" height="40" alt="" className="rounded-full" />
       </div>
 
       <div className="ml-2">
