@@ -20,7 +20,6 @@ interface PublishProps {
 const Publish: React.FC<PublishProps> = ({ onPublish }) => {
   const [phrase, setPhrase] = React.useState(0)
   const [idNumber, setIdNumber] = React.useState(0)
-
   const [description, setDescription] = React.useState('')
 
   const showPhrase = () => {
@@ -48,6 +47,14 @@ const Publish: React.FC<PublishProps> = ({ onPublish }) => {
     setIdNumber(idNumber+1)
   }
 
+  const handleChange = (e:React.ChangeEvent<HTMLTextAreaElement>) => {
+    const text = e.target.value
+    
+    if (text.length <= 280) {
+      setDescription(text)
+    }
+  }                                                                                                                                 
+
   return (
     <div className="flex p-4 mr-2">
       <div className="">
@@ -55,7 +62,13 @@ const Publish: React.FC<PublishProps> = ({ onPublish }) => {
       </div>
 
       <div className="w-11/12">
-        <textarea name="" value={description} onChange={(e) => setDescription(e.target.value)} className="p-2 bg-transparent w-full text-xl" placeholder="O que está acontecendo?" onFocus={showPhrase}></textarea>
+        <textarea name="" value={description} onChange={handleChange} className="p-2 bg-transparent w-full text-xl" placeholder="O que está acontecendo?" onFocus={showPhrase}></textarea>
+        <div>
+          <p className={ description.length > 280 ? 'text-red-500' : 'text-primary'}>
+            O post contém {description.length} caracteres
+          </p>
+        </div>
+        
         {
         phrase >= 1? <div className="text-primary text-sm font-semibold hover:bg-primaryHover px-4 py-1 rounded-2xl" >
           <a href="" className="flex gap-1 items-center"><BiWorld /> Qualquer pessoa pode responder</a>
@@ -69,7 +82,9 @@ const Publish: React.FC<PublishProps> = ({ onPublish }) => {
             <BsEmojiSmile className="size-5" />
           </div>
 
-          <button className="text-black bg-slate-300 px-4 py-1 rounded-3xl font-semibold" onClick={handlePublish}>Postar</button>
+          <button onClick={handlePublish} className="text-black bg-slate-300 px-4 py-1 rounded-3xl font-semibold">
+            Postar
+          </button>
         </div>
       </div>
     </div>

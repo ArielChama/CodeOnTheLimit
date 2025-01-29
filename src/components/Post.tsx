@@ -47,8 +47,8 @@ const Post: React.FC<PostComponentProps> = ({ post }) => {
           <span className="text-sm">{post.date}</span>
         </div>
 
-        <div className="mt-2">
-          <p>
+        <div className="mt-2 break-words whitespace-normal max-w-full">
+          <p className="w-96">
             {post.description}
           </p>
         </div>
