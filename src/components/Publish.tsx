@@ -19,6 +19,7 @@ interface PublishProps {
 
 const Publish: React.FC<PublishProps> = ({ onPublish }) => {
   const [phrase, setPhrase] = React.useState(0)
+  const [idNumber, setIdNumber] = React.useState(0)
 
   const [description, setDescription] = React.useState('')
 
@@ -28,7 +29,7 @@ const Publish: React.FC<PublishProps> = ({ onPublish }) => {
 
   const handlePublish = () => {
     const newPost = {
-      id: 3,
+      id: idNumber,
       author: 'Ariel Chama',
       username: 'arielchama',
       description: description,
@@ -43,6 +44,8 @@ const Publish: React.FC<PublishProps> = ({ onPublish }) => {
     onPublish(newPost)
 
     setDescription('')
+
+    setIdNumber(idNumber+1)
   }
 
   return (

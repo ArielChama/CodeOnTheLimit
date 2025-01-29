@@ -10,20 +10,6 @@ import { Menu, Post, Publish } from "./../components";
 
 import ImageProfile from './../assets/images/image_profile.png';
 
-const posts = [{
-  id: 1,
-  author: 'Ariel Chama',
-  username: 'arielchama', 
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor turpis vel ipsum bibendum, ac finibus enim ultricies. Maecenas vel velit et turpis dictum placerat.',
-  image: '/post_image_1.jpg',
-  likes: 20,
-  reposts: 5,
-  comments: 10,
-  views: 3,
-  date: "27 de jan"
-},
-]
-
 interface PostType {
   id: number
   author: string
@@ -73,7 +59,7 @@ function Home() {
 
           <div className="">
             {post.map((p) => (
-              <Post post={p} />
+              <Post key={p.id} post={p} />
             ))}
           </div>
         </div>
