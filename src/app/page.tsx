@@ -39,7 +39,7 @@ interface PostType {
 
 
 function Home() {
-  const [post, setPost] = React.useState<PostType[]>(posts)
+  const [post, setPost] = React.useState<PostType[]>([])
   
   const onPublish = (newPost: PostType) => {
     setPost([...post, newPost])
